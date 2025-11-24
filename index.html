@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Universidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Lista de Universidades</h1>
+        
+        <div class="controls">
+            <label for="country">Buscar por país:</label>
+            <select id="country">
+                <option value="Brazil">Brasil</option>
+                <option value="United States">Estados Unidos</option>
+                <option value="United Kingdom">Reino Unido</option>
+                <option value="Canada">Canadá</option>
+                <option value="Germany">Alemanha</option>
+                <option value="France">França</option>
+                <option value="Spain">Espanha</option>
+                <option value="Italy">Itália</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Mexico">México</option>
+                <option value="Australia">Austrália</option>
+                <option value="Japan">Japão</option>
+                <option value="China">China</option>
+                <option value="India">Índia</option>
+                <option value="South Korea">Coreia do Sul</option>
+                <option value="Netherlands">Holanda</option>
+                <option value="Sweden">Suécia</option>
+                <option value="Norway">Noruega</option>
+                <option value="Denmark">Dinamarca</option>
+                <option value="Finland">Finlândia</option>
+                <option value="Switzerland">Suíça</option>
+                <option value="Belgium">Bélgica</option>
+                <option value="Poland">Polônia</option>
+                <option value="Russia">Rússia</option>
+                <option value="Turkey">Turquia</option>
+                <option value="South Africa">África do Sul</option>
+                <option value="New Zealand">Nova Zelândia</option>
+            </select>
+            <button onclick="fetchUniversities()">Buscar Universidades</button>
+        </div>
+
+        <div id="loading"></div>
+        <div id="universities"></div>
+    </div>
+
+    <script>
+        const apiUrl = 'http://universities.hipolabs.com/search';
+
+        async function fetchUniversities() {
+            const country = document.getElementById('country').value;
+            const universitiesDiv = document.getElementById('universities');
+            const loadingDiv = document.getElementById('loading');
+
+            loadingDiv.textContent = 'Carregando universidades...';
+            universitiesDiv.innerHTML = '';
+
+            try {
+                const response = await fetch(`${apiUrl}?country=${encodeURIComponent(country)}`);
+                
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar dados da API');
+                }
+
+                const data = await response.json();
+                loadingDiv.textContent = '';
+
+                if (data.length === 0) {
+                    universitiesDiv.innerHTML = '<div class="error">Nenhuma universidade encontrada para este país.</div>';
+                    return;
+                }
+
+                data.forEach(university => {
+                    const universityDiv = document.createElement('div');
+                    universityDiv.classList.add('university');
+                    
+                    const name = university.name || 'Nome não disponível';
+                    const country = university.country || 'N/A';
+                    const domains = university.domains && university.domains.length > 0 
+                        ? university.domains.join(', ') 
+                        : 'N/A';
+                    const webPage = university.web_pages && university.web_pages.length > 0 
+                        ? university.web_pages[0] 
+                        : '#';
+
+                    universityDiv.innerHTML = `
+                        <h2>${name}</h2>
+                        <span class="country">${country}</span>
+                        <p><strong>Domínio:</strong> ${domains}</p>
+                        ${webPage !== '#' ? `<a href="${webPage}" target="_blank">🌐 Visitar site</a>` : ''}
+                    `;
+                    universitiesDiv.appendChild(universityDiv);
+                });
+
+            } catch (error) {
+                console.error('Erro ao buscar universidades:', error);
+                loadingDiv.textContent = '';
+                universitiesDiv.innerHTML = '<div class="error">Erro ao carregar as universidades. Verifique sua conexão ou tente novamente.</div>';
+            }
+        }
+
+        // Busca automática ao carregar a página
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchUniversities();
+        });
+    </script>
+</body>
+</html>
+
