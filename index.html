@@ -51,7 +51,8 @@
     </div>
 
     <script>
-        const apiUrl = 'https://universities.hipolabs.com/search';
+        // Usar a API route da Vercel como proxy
+        const apiUrl = '/api/universities';
 
         async function fetchUniversities() {
             const country = document.getElementById('country').value;
