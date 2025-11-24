@@ -20,21 +20,21 @@ export default async function handler(req, res) {
     }
 
     try {
+        // Obter o parâmetro country da query string
         const country = req.query.country;
 
         if (!country) {
             return res.status(400).json({ error: 'Country parameter is required' });
         }
 
-        // Fazer requisição para a API externa
-        const apiResponse = await fetch(
-            `https://universities.hipolabs.com/search?country=${encodeURIComponent(country)}`,
-            {
-                headers: {
-                    'Accept': 'application/json',
-                },
-            }
-        );
+        // Fazer requisição para a API externa (fetch está disponível no Node.js 18+)
+        const apiUrl = `https://universities.hipolabs.com/search?country=${encodeURIComponent(country)}`;
+        
+        const apiResponse = await fetch(apiUrl, {
+            headers: {
+                'Accept': 'application/json',
+            },
+        });
 
         if (!apiResponse.ok) {
             throw new Error(`API responded with status: ${apiResponse.status}`);
@@ -44,12 +44,14 @@ export default async function handler(req, res) {
 
         // Retornar os dados com cache headers
         res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
+        res.setHeader('Content-Type', 'application/json');
         res.status(200).json(data);
     } catch (error) {
         console.error('Error fetching universities:', error);
+        res.setHeader('Content-Type', 'application/json');
         res.status(500).json({ 
             error: 'Failed to fetch universities',
-            message: error.message 
+            message: error.message || 'Unknown error'
         });
     }
 }
