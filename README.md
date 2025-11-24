@@ -1,4 +1,4 @@
-# 📍 Atividade 01
+# 📍 SEGUNDO SEMESTRE
 
 ## 📅 Data: **14 de fevereiro de 2025**  
 ## 📚 Disciplina: **Engenharia de Software**  
