@@ -1,0 +1,10 @@
+{
+  "name": "universities-app",
+  "version": "1.0.0",
+  "description": "Aplicação para buscar universidades",
+  "type": "module",
+  "engines": {
+    "node": ">=18.x"
+  }
+}
+
