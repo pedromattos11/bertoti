@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "universities.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/universities",
+      "destination": "/universities.js"
+    }
+  ]
+}
+
