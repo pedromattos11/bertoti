@@ -26,14 +26,14 @@ A empresa Altave demandava uma solução tecnológica estratégica para centrali
 Desenvolvimento de uma plataforma interna de gestão de talentos (nos moldes de uma rede profissional corporativa) voltada para a otimização do capital humano da Altave. A solução permite que os colaboradores atualizem seus perfis dinamicamente com suas qualificações e históricos profissionais. Pelo lado da gestão, o sistema oferece uma interface para diretores e supervisores realizarem avaliações, registrarem recomendações e filtrarem profissionais por competências específicas. A arquitetura foi validada por meio de um protótipo funcional integrado, garantindo uma navegação fluida e uma estrutura de dados robusta para consultas e relatórios gerenciais.
 
 ### REPOSITÓRIO
-* **Repositório do Projeto:** [Projeto Altave - Front-End][https://github.com](https://github.com/LegacyTec/4Sem2026-1#)
+* **Repositório do Projeto:** [Repositório Altave - Altave](https://github.com/LegacyTec/4Sem2026-1#)
 * **Hospedagem do Sistema:** [Altave Protótipo no Vercel](https://4-sem2026-1.vercel.app)
 
 ### TECNOLOGIAS
 
 | Tecnologia | Utilização |
 | :--- | :--- |
-| **JavaScript / HTML / CSS** | Linguagens base utilizadas para a construção da interface do usuário, assegurando dinamismo, estrutura e estilização responsiva. |
+| **React / Vue / HTML / Tailwind / CSS** | Linguagens base utilizadas para a construção da interface do usuário, assegurando dinamismo, estrutura e estilização responsiva. |
 | **Figma** | Ferramenta utilizada para o design de interface (UI/UX) e criação de wireframes de alta fidelidade antes da codificação. |
 | **Banco de Dados Relacional** | SGBD utilizado para o armazenamento seguro, estruturação das tabelas de colaboradores e mapeamento das relações de competências. |
 | **Git & GitHub** | Ferramentas essenciais para o controle de versão distribuído, gerenciamento de ramificações (*branches*) de desenvolvimento e governança do código-fonte. |
