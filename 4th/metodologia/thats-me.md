@@ -4,16 +4,16 @@
 Sou profissional da área de Dados e Inteligência Artificial, atualmente cursando Tecnólogo em Banco de Dados na FATEC de São José dos Campos e com formação técnica em Desenvolvimento de Software. Com uma trajetória construída no ambiente industrial, possuo dois anos de experiência em processos de manufatura na Johnson & Johnson e, atualmente, atuo como estagiário de IA & Data na Embraer. Meu foco de trabalho e estudo está concentrado no ecossistema da Indústria 4.0, envolvendo o desenvolvimento de soluções com visão computacional, monitoramento de dados de máquinas em tempo real e realidade estendida, unindo os fundamentos teóricos de dados à prática direta no chão de fábrica.
 
 ## CONTATO
-* **LinkedIn:** [Seu LinkedIn](https://linkedin.com)
-* **GitHub:** [Seu GitHub](https://github.com)
-* **E-mail:** [Seu E-mail](mailto:seu.email@example.com)
+* **LinkedIn:** [Pedro Mattos]([https://linkedin.com](https://www.linkedin.com/in/pedro-mattos-09b7271b4/))
+* **GitHub:** [@pedromattos11](https://github.com/pedromattos11)
+* **E-mail:** [Email-Me](mailto:pedro.hmattos19@gmail.com)
 
 ## PRINCIPAIS CONHECIMENTOS
 * **Inteligência Artificial & Dados:** Visão Computacional, Modelos de IA, Monitoramento de Dados em Tempo Real e Indústria 4.0.
 * **Banco de Dados:** Modelagem de Dados, SQL, MySQL, PostgreSQL e Oracle Database.
 * **Desenvolvimento & Front-End:** JavaScript, HTML5, CSS3, estruturação de interfaces web e prototipagem.
 * **Controle de Versão & DevOps:** Git, GitHub e deploy contínuo (Vercel).
-* **Idiomas:** Português (Nativo), Inglês, Espanhol, Francês e Russo (em desenvolvimento).
+* **Idiomas:** Português (Nativo), Inglês, Espanhol.
 
 ---
 
