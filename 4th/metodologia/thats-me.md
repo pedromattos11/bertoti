@@ -27,7 +27,7 @@ Desenvolvimento de uma plataforma interna de gestão de talentos (nos moldes de 
 
 ### REPOSITÓRIO
 * **Repositório do Projeto:** [Projeto Altave - Front-End](https://github.com)
-* **Hospedagem do Protótipo:** [Altave Protótipo no Vercel](https://vercel.com)
+* **Hospedagem do Sistema:** [Altave Protótipo no Vercel](https://4-sem2026-1.vercel.app)
 
 ### TECNOLOGIAS
 
