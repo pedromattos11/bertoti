@@ -3,6 +3,7 @@ package com.example.composite.antipattern;
 import java.util.ArrayList;
 import java.util.List;
 
+// teste
 public class Departamento {
     private String nome;
     private List<Gerente> gerentes = new ArrayList<>();
